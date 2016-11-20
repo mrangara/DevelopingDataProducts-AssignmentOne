@@ -1,0 +1,29 @@
+---
+title: "README"
+author: "Mohan Rangarajan"
+date: "11/20/2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This project uses the leaflet library to create an interactive map. I have chosen
+the map of the state of Texas (USA) that depicts the different counties.
+The county map of Texas is from (http://tpwd.texas.gov/gis/data/baselayers/counties-zip). 
+
+In addition, the most recent population estimates were obtained from 
+http://txsdc.utsa.edu/Data/TPEPP/Estimates/
+
+A 3rd data set was used to obtain 2016 Presidential election results by each
+county in Texas. This data was obtaine from 
+http://www.npr.org/2016/11/08/501067319/texas-2016-presidential-and-state-election-results
+
+A key aspect in merging the three data sets was to ensure that the original shapefile
+that contains the association between the county name and the shape/location of 
+the county is preserved. To ensure this, the row names from the Spatial Data frame
+was retained and utilized in the data frames (for the additional data such as 2016
+population estimate and election results). 
